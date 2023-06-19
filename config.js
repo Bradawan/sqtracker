@@ -30,14 +30,14 @@ module.exports = {
 
     // A boolean value determining whether users can choose to upload anonymously.
     // Admins can still see who uploaded anonymously, but other users cannot.
-    SQ_ALLOW_ANONYMOUS_UPLOADS: false,
+    SQ_ALLOW_ANONYMOUS_UPLOADS: true,
 
     // Minimum allowed ratio. Below this users will not be able to download. Set to -1 to disable.
-    SQ_MINIMUM_RATIO: 0.75,
+    SQ_MINIMUM_RATIO: -1,
 
     // Maximum allowed hit'n'runs. Above this users will not be allowed to download. Set to -1 to disable.
     // A user has committed a hit'n'run when a torrent is fully downloaded and not seeded to a 1:1 ratio.
-    SQ_MAXIMUM_HIT_N_RUNS: 1,
+    SQ_MAXIMUM_HIT_N_RUNS: -1,
 
     // A map of torrent categories that can be selected when uploading.
     // Each has an array of zero or more sources available within that category.
@@ -67,28 +67,28 @@ module.exports = {
     SQ_BP_COST_PER_GB: 1,
 
     // Whether to enable freeleech on all torrents.
-    SQ_SITE_WIDE_FREELEECH: false,
+    SQ_SITE_WIDE_FREELEECH: true,
 
     // Whether torrent pages can be viewed by unregistered users.
     // If true, only logged-in users will be able to download/interact, but anyone (search engines included) will be able to view/read torrent info.
     // Non-logged-in users will also be able to browse category/tag pages and wiki pages that have been set to public.
     // Enable if you want torrents to be indexed to help search traffic.
-    SQ_ALLOW_UNREGISTERED_VIEW: false,
+    SQ_ALLOW_UNREGISTERED_VIEW: true,
 
     // An array of blacklisted file extensions. Torrents containing files with these extensions will fail to upload.
     SQ_EXTENSION_BLACKLIST: ["exe"],
 
     // The URL of your tracker site.
-    SQ_BASE_URL: "https://sqtracker.dev",
+    SQ_BASE_URL: "https://torrents.brad.moe",
 
     // The URL of your API. Under the recommended setup, it should be `${SQ_BASE_URL}/api`.
-    SQ_API_URL: "https://sqtracker.dev/api",
+    SQ_API_URL: "https://torrents.brad.moe/api",
 
     // The URL of your MongoDB server. Under the recommended setup, it should be `mongodb://sq_mongodb/sqtracker`.
     SQ_MONGO_URL: "mongodb://sq_mongodb/sqtracker",
 
     // The email address that mail will be sent from.
-    SQ_MAIL_FROM_ADDRESS: "mail@sqtracker.dev",
+    SQ_MAIL_FROM_ADDRESS: "test@brad.moe",
 
     // The hostname of your SMTP server.
     SQ_SMTP_HOST: "smtp.example.com",
